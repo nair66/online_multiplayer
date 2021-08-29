@@ -16,11 +16,11 @@ selectedElements = new Set([])
 io.on('connection',(socket) => {
 
     console.log('New Websocket connection')
-    console.log(io.sockets.sockets.keys())
+    // console.log(io.sockets.sockets.keys())
     socket.emit('cardSelectionUpdate',[...selectedElements])
 
     socket.on('cardClicked',(cardItemIndex) => {
-        console.log(socket.id)
+        // console.log(socket.id)
         if(!selectedElements.has(cardItemIndex)){
 
             selectedElements.add(cardItemIndex) 
