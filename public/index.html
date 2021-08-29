@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+    <title>Online Multiplayer</title>
+
+    <style>
+
+        .grid { 
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+          grid-gap: 20px;
+          align-items: stretch;
+          }
+        .grid > article {
+          border: 1px solid #ccc;
+          box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+        }
+        .grid > article img {
+          max-width: 100%;
+        }
+        .card_content {
+          padding: 0 20px 20px;
+        }
+        .card_content > button {
+          background: rgb(1, 255, 242);
+          border: 0;
+          color: rgb(0, 0, 0);
+          padding: 10px;
+          width: 100%;
+          }
+        
+        </style>
+</head>
+
+<body>
+
+<main id='container' class="grid">
+
+  <article class="card">
+    <!-- <img src="/pix/samples/23m.jpg" alt="Sample photo"> -->
+    <div class="card_content">
+      <h3>Buildings</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      
+    </div>
+  </article>
+  <article class="card">
+    <!-- <img src="/pix/samples/24m.jpg" alt="Sample photo"> -->
+    <div class="card_content">
+      <h3>Objects/Things/Packages</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      
+    </div>
+  </article>
+  <article class="card">
+    <!-- <img src="/pix/samples/22l.jpg" alt="Sample photo"> -->
+    <div class="card_content">
+      <h3>Female/Wife/Feminine</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      
+    </div>
+  </article>
+  <article class="card">
+    <!-- <img src="/pix/samples/15l.jpg" alt="Sample photo"> -->
+    <div class="card_content">
+      <h3>Work /Profession/ Craft</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      
+    </div>
+  </article>
+  <article class="card">
+    <!-- <img src="/pix/samples/25m.jpg" alt="Sample photo"> -->
+    <div class="card_content">
+      <h3>Theatre/ Film/ Camera</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      
+    </div>
+  </article>
+  <article class="card">
+    <!-- <img src="/pix/samples/16l.jpg" alt="Sample photo"> -->
+    <div class="card_content">
+      <h3>Television/ Broadcast/ Series</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      
+    </div>
+  </article>
+  <article class="card">
+    <!-- <img src="/pix/samples/23m.jpg" alt="Sample photo"> -->
+    <div class="card_content">
+      <h3>Location/ Country/ Flag</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      
+    </div>
+  </article>
+  <article class="card">
+    <!-- <img src="/pix/samples/24m.jpg" alt="Sample photo"> -->
+    <div class="card_content">
+      <h3>Watercraft/ Maritime/ Swim</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      
+    </div>
+  </article>
+  <article class="card">
+    <!-- <img src="/pix/samples/22l.jpg" alt="Sample photo"> -->
+    <div class="card_content">
+      <h3>Land vehicle/ Car/ Ride</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      
+    </div>
+  </article>
+  <article class="card">
+    <!-- <img src="/pix/samples/15l.jpg" alt="Sample photo"> -->
+    <div class="card_content">
+      <h3>Games/ Toys/ Youth</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      
+    </div>
+  </article>
+  <article class="card">
+    <!-- <img src="/pix/samples/25m.jpg" alt="Sample photo"> -->
+    <div class="card_content">
+      <h3>Food/ Nutrition/ Edible</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      
+    </div>
+  </article>
+  <article class="card">
+    <!-- <img src="/pix/samples/16l.jpg" alt="Sample photo"> -->
+    <div class="card_content">
+      <h3>Home/ Interior/ Domestic</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      
+    </div>
+  </article>
+</main>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/client.js"></script>
+
+</body>
+</html>
