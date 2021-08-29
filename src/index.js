@@ -11,12 +11,14 @@ const port = process.env.PORT || 3000
 const publicDirPath = path.join(__dirname,'../public')
 app.use(express.static(publicDirPath))
 selectedElements = new Set([])
-
+connectedClientsCount = 0
 
 io.on('connection',(socket) => {
 
+    connectedClientsCount = io.sockets.sockets.size
     console.log('New Websocket connection')
     // console.log(io.sockets.sockets.keys())
+    io.emit('clientCountUpdate',connectedClientsCount)
     socket.emit('cardSelectionUpdate',[...selectedElements])
 
     socket.on('cardClicked',(cardItemIndex) => {
@@ -31,7 +33,10 @@ io.on('connection',(socket) => {
         }
         io.emit('cardSelectionUpdate',[...selectedElements])
     })
-
+    
+    socket.on('disconnect',() => {
+        io.emit('clientCountUpdate',connectedClientsCount)
+    })
 })
 
 

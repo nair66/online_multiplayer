@@ -15,6 +15,11 @@ socket.on('cardSelectionUpdate',(selectedElements) => {
     renderCardSelections()
 })
 
+socket.on('clientCountUpdate',(count) => {
+    clientCountElement = document.querySelector('#client_count')
+    clientCountElement.innerHTML = `Connected Clients: ${count}`
+})
+
 container.addEventListener('click',(e) => {
 
     clickedCardItem = e.target.closest(".card")
